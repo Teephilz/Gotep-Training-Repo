@@ -23,8 +23,8 @@ export default function Home() {
 
       <ul className="space-y-3">
         {(users || []).map((user) => (
-          <li key={user.id} className="p-4 bg-white rounded shadow">
-            <div className="flex justify-between items-center">
+          <li key={user.id} className="p-4 bg-slate-200 rounded-2xl shadow ">
+            <div className="flex justify-between items-center px 2">
               <div>
                 <p className="font-semibold">{user.name}</p>
                 <p className="text-sm text-gray-500">{user.email}</p>
