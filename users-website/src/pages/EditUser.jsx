@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import userService from "../api/userService";
 import { editUser, resetUserStatus } from "../redux/userSlice";
+import MyLoader from "../utils/MyLoader";
 
 export default function EditUser() {
   const { id } = useParams();
@@ -62,7 +63,7 @@ export default function EditUser() {
     dispatch(editUser({ id, data: formData }));
   };
 
-  if (fetching) return <p className="text-center">Loading user data...</p>;
+  if (fetching) return <MyLoader/>;
 
   return (
     <div className="max-w-lg mx-auto">

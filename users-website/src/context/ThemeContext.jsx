@@ -5,6 +5,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [dark, setDark] = useState(false);
 
+
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add('dark');
@@ -21,3 +22,10 @@ export const ThemeProvider = ({ children }) => {
 };
 
 export default ThemeContext;
+
+
+
+
+
+
+

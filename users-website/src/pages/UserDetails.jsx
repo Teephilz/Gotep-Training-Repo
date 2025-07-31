@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, fetchUserById, resetUserStatus } from "../redux/userSlice";
+import MyLoader from "../utils/MyLoader";
 
 
 export default function UserDetails() {
@@ -34,7 +35,7 @@ export default function UserDetails() {
     // If it fails, error will show from the Redux state
   };
 
-  if (loading) return <p className="text-center">Loading user...</p>;
+  if (loading) return <MyLoader/>;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
   if (!user) return <p className="text-center text-red-500">User not found.</p>;
 
