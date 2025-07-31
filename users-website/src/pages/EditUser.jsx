@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import userService from "../api/userService";
 import { editUser, resetUserStatus } from "../redux/userSlice";
-import MyLoader from "../utils/MyLoader";
+import MyLoader from "../components/MyLoader";
+
 
 export default function EditUser() {
   const { id } = useParams();

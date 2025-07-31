@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, fetchUserById, resetUserStatus } from "../redux/userSlice";
-import MyLoader from "../utils/MyLoader";
+import MyLoader from "../components/MyLoader";
+
 
 
 export default function UserDetails() {

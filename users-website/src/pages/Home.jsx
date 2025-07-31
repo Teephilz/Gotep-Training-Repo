@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {motion} from "framer-motion";
 import UserCard from "../components/UserCard";
-import MyLoader from "../utils/MyLoader";
+import MyLoader from "../components/MyLoader";
+
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Users</h2>
+      <h2 className="text-2xl font-bold mb-4 mt-20">Users</h2>
 
       {loading && <MyLoader/>}
       {error && <p className="text-red-500">Error: {error}</p>}
